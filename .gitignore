@@ -1,7 +1,27 @@
+# Virtual env
 .venv/
+
+# Python caches
 __pycache__/
 *.pyc
+
+# Environment files (secrets)
 .env
-exports/
+.env.demo
+.env.local
+
+# State (cookies, local browser profiles)
+state/
+
+# Screenshots (runtime artifacts; not needed in repo)
 screenshots/
-.env
+
+# Playwright reports (if generated)
+playwright-report/
+test-results/
+
+# Other exports (optional; keep if you don't want large files)
+exports/
+data/output.json
+logs/
+
