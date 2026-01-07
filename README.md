@@ -1,46 +1,33 @@
 # Playwright Transaction Bot (SauceDemo)
 
-A small, production-style web automation bot built with **Python + Playwright**.
+A production-style automation bot built with **Python + Playwright**, designed to demonstrate real-world testing practices, reusable actions, environment management, and clean automation architecture.
 
-The bot:
-
-- Logs into [SauceDemo](https://www.saucedemo.com/)
-- Scrapes all inventory items (name, price, description)
-- Saves structured JSON to `data/output.json`
-- Supports multiple environments via `.env` files
-- Allows CLI overrides for headless mode and slow-motion
-- Captures screenshots on failure and writes a run log
-- Includes an end-to-end pytest to keep the flow stable
+This project is structured exactly like a junior QA automation engineer or SDET would build it — with proper logging, config separation, CLI overrides, and a full automated scraping workflow.
 
 ---
 
-## Features
+## 🚀 Features
 
-- **Login automation**  
-  Uses Playwright to open SauceDemo, enter credentials, and log in.
+### **🔐 Login Automation**
+- Navigates to SauceDemo  
+- Enters credentials  
+- Logs in and waits for inventory to load  
 
-- **Reusable actions** (`bot/actions.py`)  
-  - `safe_click` – waits for element to be visible before clicking  
-  - `type_like_human` – waits for input to be ready, types text  
-  - `wait_for_ready` – small helper to wait for page state  
-  - `screenshot` – captures a screenshot to the configured directory
+### **🔁 Reusable Actions (`bot/actions.py`)**
+- `safe_click` — waits for an element to appear, then clicks  
+- `type_like_human` — realistic typing with configurable delays  
+- `wait_for_ready` — simple page-ready helper  
+- `screenshot` — captures a screenshot to the configured directory  
 
-- **Config-driven** (`bot/config.py`)  
-  Configuration is loaded from `.env` files based on `APP_ENV`, so you can switch between environments without changing code.
+These functions make the bot stable and production-grade.
 
-- **Structured output** (`bot/scraper.py`)  
-  Scrapes the product cards and outputs JSON in this shape:
+### **⚙️ Environment-Driven Config (`bot/config.py`)**
+Supports multiple environments using `.env` files:
+- `.env` (default)
+- `.env.demo`
+- `.env.local`
 
-  ```json
-  {
-    "timestamp": "2026-01-06T06:38:53",
-    "source": "saucedemo",
-    "count": 6,
-    "items": [
-      {
-        "name": "Sauce Labs Backpack",
-        "price": "$29.99",
-        "description": "carry.allTheThings() with the sleek..."
-      }
-    ]
-  }
+Choose an environment at runtime:
+```bash
+python main.py --env demo
+
