@@ -52,7 +52,7 @@ pytest -q
 Scrapes product cards and outputs JSON like:
 
 {
-  "timestamp": "2026-01-06T06:38:53",
+  "timestamp": "2026-01-08T06:38:53",
   "source": "saucedemo",
   "count": 6,
   "items": [
@@ -64,7 +64,7 @@ Scrapes product cards and outputs JSON like:
   ]
 }
 
-📸 Logging & Failure Debugging
+📝 Logging & Failure Debugging
 
 Saves screenshots on failure
 
@@ -72,7 +72,7 @@ Writes logs to logs/run.log
 
 Tracks run start, completion, and item count
 
-🛠️ Installation
+⚙️ Installation
 1. Clone the repository
 git clone https://github.com/YOUR_USERNAME/playwright-transaction-bot.git
 cd playwright-transaction-bot
@@ -87,50 +87,58 @@ The bot reads configuration from .env files.
 
 Examples:
 
-.env (default local run)
-
-.env.demo (demo environment)
+.env        → default
+.env.demo   → demo environment
+.env.local  → local overrides
 
 ▶️ Running the Bot
+
 Default run
+
 python main.py
 
+
 Choose an environment
+
 python main.py --env demo
 
-Disable headless mode
+
+Disable headless
+
 python main.py --headless false
 
-Slow motion for debugging (ms)
+
+Slow motion for debugging
+
 python main.py --slow 300
 
 🧪 Running the Test Suite
 pytest -q
 
-📂 Project Structure
+📁 Project Structure
 playwright-transaction-bot/
-│── bot/
-│   ├── actions.py        # reusable actions
-│   ├── auth.py           # login flow
-│   ├── browser.py        # browser launcher
-│   ├── config.py         # loads .env files
-│   ├── scraper.py        # scrapes product data
+├── bot/
+│   ├── actions.py      # reusable actions
+│   ├── auth.py         # login flow
+│   ├── browser.py      # browser launcher
+│   ├── config.py       # loads .env files
+│   ├── scraper.py      # scrapes product data
 │   └── __init__.py
 │
-│── tests/
-│   └── test_flow.py      # pytest e2e test
+├── tests/
+│   └── test_flow.py    # pytest e2e test
 │
-│── data/
-│   └── output.json       # saved scrape results
+├── data/
+│   └── output.json     # saved scrape results
 │
-│── logs/
-│   └── run.log           # run history + errors
+├── logs/
+│   └── run.log         # run history + errors
 │
-│── screenshots/          # failure screenshots
-│── .env                  # default environment
-│── .env.demo             # demo environment
-│── .gitignore
-│── main.py               # CLI entrypoint
-│── requirements.txt
+├── screenshots/        # failure screenshots
+├── .env
+├── .env.demo
+├── .gitignore
+├── main.py             # CLI entrypoint
+└── requirements.txt
 │── README.md
 
