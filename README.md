@@ -6,64 +6,43 @@ This project is structured exactly like a junior QA automation engineer or SDET 
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-### **🔐 Login Automation**
+---
+
+## 🔐 Login Automation
+
 - Navigates to SauceDemo  
 - Enters credentials  
 - Logs in and waits for inventory to load  
 
-### **🔁 Reusable Actions (`bot/actions.py`)**
-- `safe_click` — waits for an element to appear, then clicks  
-- `type_like_human` — realistic typing with configurable delays  
+---
+
+## 🧩 Reusable Actions (`bot/actions.py`)
+
+- `safe_click` — waits for an element and clicks reliably  
+- `type_like_human` — realistic typing with variable delays  
 - `wait_for_ready` — simple page-ready helper  
-- `screenshot` — captures a screenshot to the configured directory  
+- `screenshot` — captures screenshots into the configured directory  
 
-These functions make the bot stable and production-grade.
-
-### **⚙️ Environment-Driven Config (`bot/config.py`)**
-Supports multiple environments using `.env` files:
-- `.env` (default)
-- `.env.demo`
-- `.env.local`
-
-Choose an environment at runtime:
-```bash
-python main.py --env demo
+These functions keep the bot stable and production-grade.
 
 ---
 
-## 🧪 End-to-End Test (`tests/test_flow.py`)
+## ⚙️ Environment-Driven Config (`bot/config.py`)
 
-A pytest test validates:
+Supports multiple environments using `.env` files:
 
-- The scraper loads  
-- Items are extracted  
-- JSON output is created  
-- No exceptions occur  
+- `.env` (default)  
+- `.env.demo`  
+- `.env.local`  
 
-Run tests:
+Choose an environment at runtime:
 
 ```bash
-pytest -q
+python main.py --env demo
 
-{
-  "timestamp": "2026-01-08T06:38:53",
-  "source": "saucedemo",
-  "count": 6,
-  "items": [
-    {
-      "name": "Sauce Labs Backpack",
-      "price": "$29.99",
-      "description": "carry.allTheThings() with the sleek..."
-    }
-  ]
-}
-
-git clone https://github.com/YOUR_USERNAME/playwright-transaction-bot.git
-cd playwright-transaction-bot
-
-pip install -r requirements.txt
-python -m playwright install
-
+Mark Lewis
+Technical Systems Analyst • Python Automation • Playwright
+(Feel free to connect or send opportunities.)
 
