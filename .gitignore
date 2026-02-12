@@ -25,3 +25,18 @@ exports/
 data/output.json
 logs/
 
+# environment files
+.env
+.env.*
+!.env.example
+
+# runtime artifacts
+.auth/
+logs/
+screenshots/
+data/
+*.log
+
+# python
+__pycache__/
+.pytest_cache/
