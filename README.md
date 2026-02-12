@@ -31,7 +31,37 @@ Choose an environment at runtime:
 ```bash
 python main.py --env demo
 
+---
 
+## 🧪 Automation Flow
+
+1. Launches a Playwright browser context
+2. Navigates to SauceDemo
+3. Logs in using environment-based credentials
+4. Waits for the inventory page to load
+5. Scrapes product name, price, and description
+6. Saves structured JSON output to `data/output.json`
+
+---
+
+## 🧰 Tech Stack
+
+- **Python 3**
+- **Playwright (sync API)**
+- **pytest**
+- **python-dotenv**
+
+---
+
+## 🛠 Setup
+
+```bash
+python -m venv .venv
+# Windows (PowerShell)
+.\.venv\Scripts\activate
+
+pip install -r requirements.txt
+playwright install
 
 
 
