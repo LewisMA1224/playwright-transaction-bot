@@ -58,8 +58,6 @@ python main.py --env demo
 
 ## 📂 Project Structure
 
-## Project Structure
-
 ```text
 ├── bot/
 │   ├── actions.py        # Reusable UI helpers (safe_click, type_like_human, etc.)
@@ -97,6 +95,7 @@ PASSWORD=secret_sauce
 OUTPUT_DIR=data
 SCREENSHOT_DIR=screenshots
 ```
+
 ## ▶️ Usage Examples
 
 ```
@@ -109,6 +108,7 @@ python main.py --env demo --headless false --slow 250
 # Very slow – great for recording or presentations
 python main.py --env demo --slow 800
 ```
+
 ## 🧪 Tests
 ```
 # Run smoke test suite (validates full flow)
@@ -117,5 +117,16 @@ pytest -v
 # Run with HTML report
 pytest --html=report.html
 ```
+
+## Why This Project Exists
+
+This project demonstrates how to build **production-grade browser automation** in Python using Playwright.
+It focuses on reliability, maintainability, and real-world interaction patterns rather than quick scripts.
+
+Key goals:
+- Avoid flaky UI automation
+- Separate concerns (browser, auth, actions, scraping)
+- Support multiple environments cleanly
+- Provide a realistic end-to-end automation workflow
 
 
