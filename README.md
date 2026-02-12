@@ -3,7 +3,6 @@
 **Production-grade UI automation example** built with **Python + Playwright** (sync API).  
 Demonstrates clean architecture, reusable helpers, environment management, stable interaction patterns, logging, and realistic end-to-end scraping workflow.
 
-This project is intentionally structured the way a professional automation engineer would build a maintainable internal utility or framework component — perfect for showcasing skills in job applications.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=flat-square&logo=python&logoColor=white" alt="Python version">
