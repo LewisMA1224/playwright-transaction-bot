@@ -27,11 +27,7 @@ Supports multiple environments using `.env` files:
 - `.env.demo`
 - `.env.local`
 
-Choose an environment at runtime:
-```bash
-python main.py --env demo
 
----
 
 ## 🧪 Automation Flow
 
