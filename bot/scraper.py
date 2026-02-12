@@ -45,7 +45,13 @@ def scrape(page: Page) -> dict:
     }
     return payload
 
-def save_output(payload: dict) -> None:
-    with open(SETTINGS.output_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2, ensure_ascii=False)
+from pathlib import Path
+import json
+
+def save_output(data):
+    output_path = Path(SETTINGS.output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    with output_path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
 
