@@ -78,6 +78,21 @@ python main.py --env demo
 └── README.md             # Project documentation
 ```
 
+## Architecture Overview
+
+The project follows a modular design to keep responsibilities isolated:
+
+- `browser.py` handles Playwright setup and lifecycle
+- `auth.py` encapsulates login behavior
+- `actions.py` provides safe, reusable UI interactions
+- `scraper.py` focuses solely on data extraction and export
+- `main.py` acts as a CLI orchestrator
+
+This separation improves testability, readability, and long-term maintainability.
+
+
+
+
 ## 🔐 Configuration
 
 Multiple environments are supported via .env files:
