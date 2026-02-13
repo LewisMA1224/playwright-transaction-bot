@@ -24,29 +24,33 @@ Demonstrates clean architecture, reusable helpers, environment management, stabl
 ## ⚡ Quick Start
 
 ```bash
-# 1. Clone and prepare environment
+# 1. Clone the repository
 git clone https://github.com/YOUR_USERNAME/playwright-saucedemo-bot.git
 cd playwright-saucedemo-bot
 
-# 2. Create virtual environment & install dependencies
+# 2. Create & activate virtual environment
 python -m venv .venv
 # Windows
 .\.venv\Scripts\activate
 # macOS / Linux
 source .venv/bin/activate
 
+# 3. Install dependencies
 pip install -r requirements.txt
 playwright install --with-deps
 
-# 3. Create a demo config (or use your own credentials)
+# 4. Prepare demo configuration (uses standard demo credentials)
 cp .env.example .env.demo
 
-# 4. Run the bot (headed + slow motion – great for demos)
+# 5. Run – headed + slow motion (great for demos / debugging)
 python main.py --env demo --headless false --slow 250
 
-# 5. Run in background (production-like)
+# 6. Run headless (production-like / CI)
 python main.py --env demo
 ```
+
+
+
 ## 🛠️ Tech Stack
 
 | Component            | Technology              | Purpose                                   |
