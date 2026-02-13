@@ -3,6 +3,9 @@
 **Production-grade UI automation example** built with **Python + Playwright** (sync API).  
 Demonstrates clean architecture, reusable helpers, environment management, stable interaction patterns, logging, and realistic end-to-end scraping workflow.
 
+This project is intended as a portfolio-quality example of maintainable UI automation,
+not a full testing framework or scraping tool.
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.9%2B-blue?style=flat-square&logo=python&logoColor=white" alt="Python version">
@@ -14,12 +17,23 @@ Demonstrates clean architecture, reusable helpers, environment management, stabl
 
 - Stable login automation against SauceDemo
 - Human-like typing with configurable delays
-- Flake-resistant interaction helpers (`safe_click`, explicit waits)
+- Flakiness-resistant interaction helpers (`safe_click`, explicit waits)
 - Environment-based configuration via `.env` files
 - CLI flags for headless, slow-motion, and debug modes
 - Structured JSON output for scraped inventory data
 - Optional screenshot capture for debugging
 - End-to-end smoke testing with pytest
+
+## Why This Project Exists
+
+This project demonstrates how to build **production-grade browser automation** in Python using Playwright.
+It focuses on reliability, maintainability, and real-world interaction patterns rather than quick scripts.
+
+Key goals:
+- Avoid flaky UI automation
+- Separate concerns (browser, auth, actions, scraping)
+- Support multiple environments cleanly
+- Provide a realistic end-to-end automation workflow
 
 ## ⚡ Quick Start
 
@@ -137,15 +151,6 @@ pytest -v
 pytest --html=report.html
 ```
 
-## Why This Project Exists
 
-This project demonstrates how to build **production-grade browser automation** in Python using Playwright.
-It focuses on reliability, maintainability, and real-world interaction patterns rather than quick scripts.
-
-Key goals:
-- Avoid flaky UI automation
-- Separate concerns (browser, auth, actions, scraping)
-- Support multiple environments cleanly
-- Provide a realistic end-to-end automation workflow
 
 
