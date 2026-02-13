@@ -13,6 +13,7 @@ not a full testing framework or scraping tool.
   <img src="https://img.shields.io/badge/pytest-enabled-brightgreen?style=flat-square" alt="pytest">
 </p>
 
+
 ## ✨ Features
 
 - Stable login automation against SauceDemo
@@ -23,6 +24,7 @@ not a full testing framework or scraping tool.
 - Structured JSON output for scraped inventory data
 - Optional screenshot capture for debugging
 - End-to-end smoke testing with pytest
+
 
 
 ## Why This Project Exists
