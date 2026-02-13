@@ -24,6 +24,7 @@ not a full testing framework or scraping tool.
 - Optional screenshot capture for debugging
 - End-to-end smoke testing with pytest
 
+
 ## Why This Project Exists
 
 This project demonstrates how to build **production-grade browser automation** in Python using Playwright.
@@ -34,6 +35,7 @@ Key goals:
 - Separate concerns (browser, auth, actions, scraping)
 - Support multiple environments cleanly
 - Provide a realistic end-to-end automation workflow
+
 
 ## ⚡ Quick Start
 
@@ -74,6 +76,7 @@ python main.py --env demo
 | Configuration        | python-dotenv            | Secure, environment-based configuration management |
 | Filesystem Handling  | pathlib                  | Modern, safe, and platform-independent path handling |
 
+
 ## 📂 Project Structure
 
 ```text
@@ -96,6 +99,7 @@ python main.py --env demo
 └── README.md             # Project documentation
 ```
 
+
 ## Architecture Overview
 
 The project follows a modular design to keep responsibilities isolated:
@@ -107,8 +111,6 @@ The project follows a modular design to keep responsibilities isolated:
 - `main.py` acts as a CLI orchestrator
 
 This separation improves testability, readability, and long-term maintainability.
-
-
 
 
 ## 🔐 Configuration
@@ -129,6 +131,7 @@ OUTPUT_DIR=data
 SCREENSHOT_DIR=screenshots
 ```
 
+
 ## ▶️ Usage Examples
 
 ```
@@ -141,6 +144,7 @@ python main.py --env demo --headless false --slow 250
 # Very slow – great for recording or presentations
 python main.py --env demo --slow 800
 ```
+
 
 ## 🧪 Tests
 ```
