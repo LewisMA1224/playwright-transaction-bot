@@ -12,14 +12,14 @@ Demonstrates clean architecture, reusable helpers, environment management, stabl
 
 ## ✨ Features
 
-- **Stable login automation** to SauceDemo
-- **Human-like typing** simulation with configurable delays
-- **Flakiness-resistant** interaction helpers (`safe_click`, explicit waits)
-- **Environment-based configuration** via `.env` files
-- **CLI overrides** for headless/slow-motion/debug modes
-- **Structured JSON output** of scraped inventory data
-- **Automatic screenshot** capture on demand
-- **Smoke test** suite with pytest
+- Stable login automation against SauceDemo
+- Human-like typing with configurable delays
+- Flake-resistant interaction helpers (`safe_click`, explicit waits)
+- Environment-based configuration via `.env` files
+- CLI flags for headless, slow-motion, and debug modes
+- Structured JSON output for scraped inventory data
+- Optional screenshot capture for debugging
+- End-to-end smoke testing with pytest
 
 ## ⚡ Quick Start
 
