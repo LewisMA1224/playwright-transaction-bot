@@ -14,7 +14,7 @@ not a full testing framework or scraping tool.
 </p>
 
 
-## ✨ Features
+##  Features
 
 - Stable login automation against SauceDemo
 - Human-like typing with configurable delays
@@ -41,7 +41,7 @@ Key goals:
 
 
 
-## ⚡ Quick Start
+##  Quick Start
 
 ```bash
 # 1. Clone the repository
@@ -71,7 +71,7 @@ python main.py --env demo
 
 
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Component            | Technology              | Purpose                                   |
 |----------------------|--------------------------|-------------------------------------------|
@@ -81,7 +81,7 @@ python main.py --env demo
 | Filesystem Handling  | pathlib                  | Modern, safe, and platform-independent path handling |
 
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 ├── bot/
@@ -117,7 +117,7 @@ The project follows a modular design to keep responsibilities isolated:
 This separation improves testability, readability, and long-term maintainability.
 
 
-## 🔐 Configuration
+##  Configuration
 
 Multiple environments are supported via .env files:
 
@@ -136,7 +136,7 @@ SCREENSHOT_DIR=screenshots
 ```
 
 
-## ▶️ Usage Examples
+##  Usage Examples
 
 ```
 # Normal run (headless)
@@ -150,7 +150,7 @@ python main.py --env demo --slow 800
 ```
 
 
-## 🧪 Tests
+##  Tests
 ```
 # Run smoke test suite (validates full flow)
 pytest -v
